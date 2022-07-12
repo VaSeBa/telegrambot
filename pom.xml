@@ -12,7 +12,7 @@
 
 	<groupId>ru.vaseba</groupId>
 	<artifactId>telegrambot</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>TelegramBot</name>
 	<description>Telegram bot for Javarush from community to community</description>
 
@@ -30,6 +30,7 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+<!--		https://github.com/rubenlagus/TelegramBots/tree/master/telegrambots-spring-boot-starter-->
 		<dependency>
 			<groupId>org.telegram</groupId>
 			<artifactId>telegrambots-spring-boot-starter</artifactId>
