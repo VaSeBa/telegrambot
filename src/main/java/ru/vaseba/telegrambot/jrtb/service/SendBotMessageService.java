@@ -1,4 +1,4 @@
-package ru.vaseba.telegrambot.service;
+package ru.vaseba.telegrambot.jrtb.service;
 
 /**
  * Service for sending messages via telegram-bot.

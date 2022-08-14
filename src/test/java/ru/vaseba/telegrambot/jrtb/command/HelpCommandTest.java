@@ -1,20 +1,17 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.DisplayName;
-
-import static ru.vaseba.telegrambot.command.CommandName.HELP;
-import static ru.vaseba.telegrambot.command.HelpCommand.HELP_MESSAGE;
 
 @DisplayName("Unit-level testing for HelpCommand")
 public class HelpCommandTest extends AbstractCommandTest{
     @Override
     String getCommandName() {
-        return HELP.getCommandName();
+        return CommandName.HELP.getCommandName();
     }
 
     @Override
     String getCommandMessage() {
-        return HELP_MESSAGE;
+        return HelpCommand.HELP_MESSAGE;
     }
 
     @Override

@@ -1,16 +1,15 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.DisplayName;
 
-import static ru.vaseba.telegrambot.command.CommandName.STOP;
-import static ru.vaseba.telegrambot.command.StopCommand.STOP_MESSAGE;
+import static ru.vaseba.telegrambot.jrtb.command.StopCommand.STOP_MESSAGE;
 
 @DisplayName("Unit-level testing for StopCommand")
 public class StopCommandTest extends AbstractCommandTest {
 
     @Override
     String getCommandName() {
-        return STOP.getCommandName();
+        return CommandName.STOP.getCommandName();
     }
 
     @Override

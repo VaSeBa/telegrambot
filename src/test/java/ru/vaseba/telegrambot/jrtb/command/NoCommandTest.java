@@ -1,20 +1,17 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.DisplayName;
-
-import static ru.vaseba.telegrambot.command.CommandName.NO;
-import static ru.vaseba.telegrambot.command.NoCommand.NO_MESSAGE;
 
 @DisplayName("Unit-level testing for NoCommand")
 public class NoCommandTest extends AbstractCommandTest{
     @Override
     String getCommandName() {
-        return NO.getCommandName();
+        return CommandName.NO.getCommandName();
     }
 
     @Override
     String getCommandMessage() {
-        return NO_MESSAGE;
+        return NoCommand.NO_MESSAGE;
     }
 
     @Override

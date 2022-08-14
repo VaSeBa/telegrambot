@@ -1,4 +1,4 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -6,9 +6,9 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.vaseba.telegrambot.bot.JavarushTelegramBot;
-import ru.vaseba.telegrambot.service.SendBotMessageService;
-import ru.vaseba.telegrambot.service.SendBotMessageServiceImpl;
+import ru.vaseba.telegrambot.jrtb.bot.JavarushTelegramBot;
+import ru.vaseba.telegrambot.jrtb.service.SendBotMessageService;
+import ru.vaseba.telegrambot.jrtb.service.SendBotMessageServiceImpl;
 
 /**
  * Abstract class for testing {@link Command}s.

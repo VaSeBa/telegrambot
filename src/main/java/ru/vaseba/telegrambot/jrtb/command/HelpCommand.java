@@ -1,9 +1,7 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.vaseba.telegrambot.service.SendBotMessageService;
-
-import static ru.vaseba.telegrambot.command.CommandName.*;
+import ru.vaseba.telegrambot.jrtb.service.SendBotMessageService;
 
 /**
  * Help {@link Command}.
@@ -18,7 +16,7 @@ public class HelpCommand implements Command {
                     + "%s - начать работу со мной\n"
                     + "%s - приостановить работу со мной\n\n"
                     + "%s - получить помощь в работе со мной\n",
-            START.getCommandName(), STOP.getCommandName(), HELP.getCommandName());
+            CommandName.START.getCommandName(), CommandName.STOP.getCommandName(), CommandName.HELP.getCommandName());
 
     public HelpCommand(SendBotMessageService sendBotMessageService) {
         this.sendBotMessageService = sendBotMessageService;

@@ -1,4 +1,4 @@
-package ru.vaseba.telegrambot;
+package ru.vaseba.telegrambot.jrtb;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

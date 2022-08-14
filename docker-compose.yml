@@ -1,0 +1,10 @@
+version: '2.9.0'
+
+services:
+  ru:
+    build:
+      context: .
+    environment:
+      - BOT_NAME=${BOT_NAME}
+      - BOT_TOKEN=${BOT_TOKEN}
+    restart: always

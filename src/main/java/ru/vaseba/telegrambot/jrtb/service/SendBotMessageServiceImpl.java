@@ -1,10 +1,10 @@
-package ru.vaseba.telegrambot.service;
+package ru.vaseba.telegrambot.jrtb.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.vaseba.telegrambot.bot.JavarushTelegramBot;
+import ru.vaseba.telegrambot.jrtb.bot.JavarushTelegramBot;
 
 /**
  * Implementation of {@link SendBotMessageService} interface.

@@ -1,15 +1,12 @@
-package ru.vaseba.telegrambot.bot;
+package ru.vaseba.telegrambot.jrtb.bot;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import ru.vaseba.telegrambot.command.CommandContainer;
-import ru.vaseba.telegrambot.service.SendBotMessageServiceImpl;
-
-import static ru.vaseba.telegrambot.command.CommandName.NO;
+import ru.vaseba.telegrambot.jrtb.command.CommandContainer;
+import ru.vaseba.telegrambot.jrtb.command.CommandName;
+import ru.vaseba.telegrambot.jrtb.service.SendBotMessageServiceImpl;
 
 /**
  * Telegram bot for Javarush Community from Javarush community.
@@ -40,7 +37,7 @@ public class JavarushTelegramBot extends TelegramLongPollingBot {
 
                 commandContainer.retrieveCommand(commandIdentifier).execute(update);
             } else {
-                commandContainer.retrieveCommand(NO.getCommandName()).execute(update);
+                commandContainer.retrieveCommand(CommandName.NO.getCommandName()).execute(update);
             }
         }
     }

@@ -1,4 +1,4 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 /**
  * Enumeration for {@link Command}'s.

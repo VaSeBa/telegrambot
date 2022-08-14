@@ -1,21 +1,18 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.DisplayName;
-
-import static ru.vaseba.telegrambot.command.CommandName.START;
-import static ru.vaseba.telegrambot.command.StartCommand.START_MESSAGE;
 
 @DisplayName("Unit-level testing for StartCommand")
 class StartCommandTest extends AbstractCommandTest {
 
     @Override
     String getCommandName() {
-        return START.getCommandName();
+        return CommandName.START.getCommandName();
     }
 
     @Override
     String getCommandMessage() {
-        return START_MESSAGE;
+        return StartCommand.START_MESSAGE;
     }
 
     @Override

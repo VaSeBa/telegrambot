@@ -1,9 +1,7 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import com.google.common.collect.ImmutableMap;
-import ru.vaseba.telegrambot.service.SendBotMessageService;
-
-import static ru.vaseba.telegrambot.command.CommandName.*;
+import ru.vaseba.telegrambot.jrtb.service.SendBotMessageService;
 
 /**
  * Container of the {@link Command}s, which are using for handling telegram commands.
@@ -16,10 +14,10 @@ public class CommandContainer {
     public CommandContainer(SendBotMessageService sendBotMessageService) {
 
         commandMap = ImmutableMap.<String, Command>builder()
-                .put(START.getCommandName(), new StartCommand(sendBotMessageService))
-                .put(STOP.getCommandName(), new StopCommand(sendBotMessageService))
-                .put(HELP.getCommandName(), new HelpCommand(sendBotMessageService))
-                .put(NO.getCommandName(), new NoCommand(sendBotMessageService))
+                .put(CommandName.START.getCommandName(), new StartCommand(sendBotMessageService))
+                .put(CommandName.STOP.getCommandName(), new StopCommand(sendBotMessageService))
+                .put(CommandName.HELP.getCommandName(), new HelpCommand(sendBotMessageService))
+                .put(CommandName.NO.getCommandName(), new NoCommand(sendBotMessageService))
                 .build();
 
         unknownCommand = new UnknownCommand(sendBotMessageService);

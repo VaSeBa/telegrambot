@@ -1,15 +1,13 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
-import ru.vaseba.telegrambot.service.SendBotMessageService;
+import ru.vaseba.telegrambot.jrtb.service.SendBotMessageService;
 
 import java.util.Arrays;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 @DisplayName("Unit-level testing for CommandContainer")
 public class CommandContainerTest {

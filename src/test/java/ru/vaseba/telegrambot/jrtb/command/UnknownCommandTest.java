@@ -1,8 +1,6 @@
-package ru.vaseba.telegrambot.command;
+package ru.vaseba.telegrambot.jrtb.command;
 
 import org.junit.jupiter.api.DisplayName;
-
-import static ru.vaseba.telegrambot.command.UnknownCommand.UNKNOWN_MESSAGE;
 
 @DisplayName("Unit-level testing for UnknownCommand")
 public class UnknownCommandTest extends AbstractCommandTest {
@@ -14,7 +12,7 @@ public class UnknownCommandTest extends AbstractCommandTest {
 
     @Override
     String getCommandMessage() {
-        return UNKNOWN_MESSAGE;
+        return UnknownCommand.UNKNOWN_MESSAGE;
     }
 
     @Override
