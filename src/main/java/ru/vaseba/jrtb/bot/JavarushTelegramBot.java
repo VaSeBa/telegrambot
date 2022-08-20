@@ -1,12 +1,12 @@
-package ru.vaseba.telegrambot.jrtb.bot;
+package ru.vaseba.jrtb.bot;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.vaseba.telegrambot.jrtb.command.CommandContainer;
-import ru.vaseba.telegrambot.jrtb.command.CommandName;
-import ru.vaseba.telegrambot.jrtb.service.SendBotMessageServiceImpl;
+import ru.vaseba.jrtb.command.CommandName;
+import ru.vaseba.jrtb.command.CommandContainer;
+import ru.vaseba.jrtb.service.SendBotMessageServiceImpl;
 
 /**
  * Telegram bot for Javarush Community from Javarush community.

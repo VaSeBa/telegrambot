@@ -1,7 +1,7 @@
-package ru.vaseba.telegrambot.jrtb.command;
+package ru.vaseba.jrtb.command;
 
 import com.google.common.collect.ImmutableMap;
-import ru.vaseba.telegrambot.jrtb.service.SendBotMessageService;
+import ru.vaseba.jrtb.service.SendBotMessageService;
 
 /**
  * Container of the {@link Command}s, which are using for handling telegram commands.

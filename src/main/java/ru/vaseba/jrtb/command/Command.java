@@ -1,4 +1,4 @@
-package ru.vaseba.telegrambot.jrtb.command;
+package ru.vaseba.jrtb.command;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
 
