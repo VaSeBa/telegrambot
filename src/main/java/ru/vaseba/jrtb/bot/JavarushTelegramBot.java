@@ -1,5 +1,6 @@
 package ru.vaseba.jrtb.bot;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -7,6 +8,7 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.vaseba.jrtb.command.CommandName;
 import ru.vaseba.jrtb.command.CommandContainer;
 import ru.vaseba.jrtb.service.SendBotMessageServiceImpl;
+import ru.vaseba.jrtb.service.TelegramUserService;
 
 /**
  * Telegram bot for Javarush Community from Javarush community.
@@ -24,8 +26,9 @@ public class JavarushTelegramBot extends TelegramLongPollingBot {
 
     private final CommandContainer commandContainer;
 
-    public JavarushTelegramBot() {
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this));
+    @Autowired
+    public JavarushTelegramBot(TelegramUserService telegramUserService) {
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService);
     }
 
     @Override

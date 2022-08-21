@@ -1,16 +1,13 @@
-version: '3.1'
+version: '3.8'
 
 services:
   jrtb-db:
     image: mysql:8.0.30
     restart: always
     environment:
-      MYSQL_DATABASE: 'dev_jrtb_db'
-      # So you don't have to use root, but you can if you like
-      MYSQL_USER: 'dev_jrtb_db_user'
-      # You can use whatever password you like
-      MYSQL_PASSWORD: 'dev_jrtb_db_password'
-      # Password for root access
+      MYSQL_DATABASE: 'jrtb_db'
+      MYSQL_USER: 'vaseba'
+      MYSQL_PASSWORD: 'dfkbrj'
       MYSQL_ROOT_PASSWORD: 'dfkbrj'
     ports:
       - '3307:3306'
