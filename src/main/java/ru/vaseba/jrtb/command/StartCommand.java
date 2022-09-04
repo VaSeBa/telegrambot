@@ -5,6 +5,8 @@ import ru.vaseba.jrtb.repository.TelegramUser;
 import ru.vaseba.jrtb.service.SendBotMessageService;
 import ru.vaseba.jrtb.service.TelegramUserService;
 
+import static ru.vaseba.jrtb.command.CommandUtils.getChatId;
+
 /**
  * Start {@link Command}.
  */
@@ -26,7 +28,7 @@ public class StartCommand implements Command {
 
     @Override
     public void execute(Update update) {
-        String chatId = update.getMessage().getChatId().toString();
+        Long chatId = getChatId(update);
 
         telegramUserService.findByChatId(chatId).ifPresentOrElse(
                 user -> {

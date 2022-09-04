@@ -7,6 +7,8 @@ import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.vaseba.jrtb.command.CommandName;
 import ru.vaseba.jrtb.command.CommandContainer;
+import ru.vaseba.jrtb.javarushclient.JavaRushGroupClient;
+import ru.vaseba.jrtb.service.GroupSubService;
 import ru.vaseba.jrtb.service.SendBotMessageServiceImpl;
 import ru.vaseba.jrtb.service.TelegramUserService;
 
@@ -27,8 +29,8 @@ public class JavarushTelegramBot extends TelegramLongPollingBot {
     private final CommandContainer commandContainer;
 
     @Autowired
-    public JavarushTelegramBot(TelegramUserService telegramUserService) {
-        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService);
+    public JavarushTelegramBot(TelegramUserService telegramUserService, JavaRushGroupClient javaRushGroupClient, GroupSubService groupSubService) {
+        this.commandContainer = new CommandContainer(new SendBotMessageServiceImpl(this), telegramUserService, javaRushGroupClient, groupSubService);
     }
 
     @Override

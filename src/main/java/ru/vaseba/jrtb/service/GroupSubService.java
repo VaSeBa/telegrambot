@@ -8,5 +8,5 @@ import ru.vaseba.jrtb.repository.entity.GroupSub;
  */
 public interface GroupSubService {
 
-    GroupSub save(String chatId, GroupDiscussionInfo groupDiscussionInfo);
+    GroupSub save(Long chatId, GroupDiscussionInfo groupDiscussionInfo);
 }

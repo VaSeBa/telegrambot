@@ -3,6 +3,8 @@ package ru.vaseba.jrtb.command;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.vaseba.jrtb.service.SendBotMessageService;
 
+import static ru.vaseba.jrtb.command.CommandUtils.getChatId;
+
 /**
  * Help {@link Command}.
  */
@@ -24,6 +26,6 @@ public class HelpCommand implements Command {
 
     @Override
     public void execute(Update update) {
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), HELP_MESSAGE);
+        sendBotMessageService.sendMessage(getChatId(update), HELP_MESSAGE);
     }
 }

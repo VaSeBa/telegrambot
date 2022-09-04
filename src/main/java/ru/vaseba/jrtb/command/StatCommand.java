@@ -5,6 +5,8 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import ru.vaseba.jrtb.service.SendBotMessageService;
 import ru.vaseba.jrtb.service.TelegramUserService;
 
+import static ru.vaseba.jrtb.command.CommandUtils.getChatId;
+
 /**
  * Statistics {@link Command}.
  */
@@ -24,6 +26,6 @@ public class StatCommand implements Command {
     @Override
     public void execute(Update update) {
         int activeUserCount = telegramUserService.retrieveAllActiveUsers().size();
-        sendBotMessageService.sendMessage(update.getMessage().getChatId().toString(), String.format(STAT_MESSAGE, activeUserCount));
+        sendBotMessageService.sendMessage(getChatId(update), String.format(STAT_MESSAGE, activeUserCount));
     }
 }
