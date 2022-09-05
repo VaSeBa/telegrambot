@@ -2,7 +2,6 @@ package ru.vaseba.jrtb.repository.entity;
 
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import ru.vaseba.jrtb.repository.TelegramUser;
 
 import javax.persistence.*;
 import java.util.ArrayList;

@@ -1,7 +1,7 @@
 package ru.vaseba.jrtb.command;
 
 import org.telegram.telegrambots.meta.api.objects.Update;
-import ru.vaseba.jrtb.repository.TelegramUser;
+import ru.vaseba.jrtb.repository.entity.TelegramUser;
 import ru.vaseba.jrtb.repository.entity.GroupSub;
 import ru.vaseba.jrtb.service.SendBotMessageService;
 import ru.vaseba.jrtb.service.TelegramUserService;

@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 import ru.vaseba.jrtb.javarushclient.dto.GroupDiscussionInfo;
 import ru.vaseba.jrtb.repository.GroupSubRepository;
-import ru.vaseba.jrtb.repository.TelegramUser;
+import ru.vaseba.jrtb.repository.entity.TelegramUser;
 import ru.vaseba.jrtb.repository.entity.GroupSub;
 
 import java.util.Optional;

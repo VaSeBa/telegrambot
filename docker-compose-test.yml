@@ -10,6 +10,7 @@ services:
       MYSQL_PASSWORD: 'dfkbrj'
       MYSQL_ROOT_PASSWORD: 'dfkbrj'
     ports:
-      - '3307:3306'
+      - '3306:3306'
     expose:
-      - '3307'
+      - '3306'
+    command: --character-set-server=utf8 --collation-server=utf8_general_ci

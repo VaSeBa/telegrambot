@@ -8,6 +8,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.jdbc.Sql;
 import ru.vaseba.jrtb.repository.entity.GroupSub;
+import ru.vaseba.jrtb.repository.entity.TelegramUser;
 
 import java.util.List;
 import java.util.Optional;

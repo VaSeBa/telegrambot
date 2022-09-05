@@ -1,7 +1,7 @@
 package ru.vaseba.jrtb.service;
 
 import org.springframework.stereotype.Service;
-import ru.vaseba.jrtb.repository.TelegramUser;
+import ru.vaseba.jrtb.repository.entity.TelegramUser;
 
 import java.util.List;
 import java.util.Optional;

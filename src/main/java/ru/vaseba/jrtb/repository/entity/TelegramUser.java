@@ -1,4 +1,4 @@
-package ru.vaseba.jrtb.repository;
+package ru.vaseba.jrtb.repository.entity;
 
 import lombok.Data;
 import ru.vaseba.jrtb.repository.entity.GroupSub;

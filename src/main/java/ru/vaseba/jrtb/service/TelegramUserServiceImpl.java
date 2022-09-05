@@ -2,7 +2,7 @@ package ru.vaseba.jrtb.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.vaseba.jrtb.repository.TelegramUser;
+import ru.vaseba.jrtb.repository.entity.TelegramUser;
 import ru.vaseba.jrtb.repository.TelegramUserRepository;
 
 import java.util.List;
