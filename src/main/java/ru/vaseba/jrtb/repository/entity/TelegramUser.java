@@ -1,6 +1,7 @@
 package ru.vaseba.jrtb.repository.entity;
 
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import ru.vaseba.jrtb.repository.entity.GroupSub;
 
 import javax.persistence.*;
@@ -13,6 +14,7 @@ import java.util.List;
 @Data
 @Entity
 @Table(name = "tg_user")
+@EqualsAndHashCode(exclude = "groupSubs")
 public class TelegramUser {
 
     @Id
