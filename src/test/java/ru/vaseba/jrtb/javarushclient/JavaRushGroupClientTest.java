@@ -1,19 +1,23 @@
 package ru.vaseba.jrtb.javarushclient;
 
+import ru.vaseba.jrtb.javarushclient.dto.GroupDiscussionInfo;
+import ru.vaseba.jrtb.javarushclient.dto.GroupInfo;
+import ru.vaseba.jrtb.javarushclient.dto.GroupRequestArgs;
+import ru.vaseba.jrtb.javarushclient.dto.GroupsCountRequestArgs;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
-import ru.vaseba.jrtb.javarushclient.dto.*;
 
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static ru.vaseba.jrtb.javarushclient.dto.GroupInfoType.TECH;
 
 @DisplayName("Integration-level testing for JavaRushGroupClientImplTest")
 class JavaRushGroupClientTest {
 
-    private final JavaRushGroupClient groupClient = new JavaRushGroupClientImpl("https://javarush.ru/api/1.0/rest");
+    public static final String JAVARUSH_API_PATH = "https://javarush.ru/api/1.0/rest";
+
+    private final JavaRushGroupClient groupClient = new JavaRushGroupClientImpl(JAVARUSH_API_PATH);
 
     @Test
     public void shouldProperlyGetGroupsWithEmptyArgs() {
@@ -112,5 +116,18 @@ class JavaRushGroupClientTest {
         Assertions.assertEquals(16, groupById.getId());
         Assertions.assertEquals(TECH, groupById.getType());
         Assertions.assertEquals("android", groupById.getKey());
+    }
+
+    @Test
+    public void shouldNotProperlyGetGroupById() {
+        //given
+        Integer androidGroupId = Integer.MAX_VALUE;
+
+        //when
+        GroupDiscussionInfo groupById = groupClient.getGroupById(androidGroupId);
+
+        //then
+        Assertions.assertNull(groupById.getKey());
+        Assertions.assertNull(groupById.getId());
     }
 }
