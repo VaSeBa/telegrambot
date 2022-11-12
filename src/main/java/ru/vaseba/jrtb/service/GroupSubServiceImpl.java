@@ -8,6 +8,7 @@ import ru.vaseba.jrtb.repository.entity.TelegramUser;
 import ru.vaseba.jrtb.repository.entity.GroupSub;
 
 import javax.ws.rs.NotFoundException;
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -53,5 +54,10 @@ public class GroupSubServiceImpl implements GroupSubService {
     @Override
     public Optional<GroupSub> findById(Integer id) {
         return groupSubRepository.findById(id);
+    }
+
+    @Override
+    public List<GroupSub> findAll() {
+        return groupSubRepository.findAll();
     }
 }
